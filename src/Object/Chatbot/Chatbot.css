@@ -1,12 +1,17 @@
+:root {
+    --primaryColor: #ED1215;
+    --secondaryColor: #12EDEA;
+}
+
 .Chatbot {
-    background: #afad32;
+    background: #030000;
     width: 90%; height: 80%;
     margin: auto;
 }
 
 .Chatbot .aiBody {
     width: 100%; height: 92%;
-    background-color: #8ff328;
+    background-color: #1f2024;
 }
 .Chatbot .aiBody .titleBar {
     display: flex;
@@ -14,12 +19,12 @@
     align-items: center;
     width: 100%;
     height: 50px;
-    background-color: wheat;
+    background-color: #a4a8ab;
 
 }
 .Chatbot .aiBody .responseBox {
     width: 90%; height: 100%;
-    background-color: grey;
+    background-color: #343c3b;
     margin: auto;
 }
 
@@ -38,7 +43,7 @@
 .Chatbot .userInput .submitButton {
     width: 20%; height: 100%;
     margin: auto;
-    background: red;
+    background: var(--secondaryColor);
     cursor: pointer;
     display: flex;
     justify-content: center;
