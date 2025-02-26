@@ -1,0 +1,46 @@
+.Chatbot {
+    background: #afad32;
+    width: 90%; height: 80%;
+    margin: auto;
+}
+
+.Chatbot .aiBody {
+    width: 100%; height: 92%;
+    background-color: #838328;
+}
+.Chatbot .aiBody .titleBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: wheat;
+
+}
+.Chatbot .aiBody .responseBox {
+    width: 90%; height: 100%;
+    background-color: grey;
+    margin: auto;
+}
+
+.Chatbot .userInput {
+    width: 100%; height: 8%;
+    background: #afad32;
+
+    display: flex;
+    flex-direction: row;
+}
+.Chatbot .userInput input {
+    width: 80%;
+    outline: none;
+    text-align: center;
+}
+.Chatbot .userInput .submitButton {
+    width: 20%; height: 100%;
+    margin: auto;
+    background: red;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
