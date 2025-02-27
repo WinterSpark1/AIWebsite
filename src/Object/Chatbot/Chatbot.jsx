@@ -18,10 +18,11 @@ const Chatbot = () => {
     );
 };
 
+
 const ChatBody = ({ messages }) => {
     return (
         <div className="chatBody">
-            <div className="titleBar"><h2>Winter's AI Chat</h2></div>
+            <div className="titleBar"><h2>Winter&#39;s AI Chat</h2></div>
             <div className="responseBox">
                 {messages.map((msg, index) => (
                     <Message key={index} message={msg} />
@@ -40,7 +41,7 @@ const UserInput = ({ addMessage }) => {
 
         generateReply({ input_message: input })
             .then(response => {
-                addMessage(response.message.content);
+                addMessage(response);
         })
             .catch(error => console.error("Error generating reply:", error));
     };
