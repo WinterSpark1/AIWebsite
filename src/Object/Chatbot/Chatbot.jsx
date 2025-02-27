@@ -6,7 +6,7 @@ const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const addMessage = (newMessage) => {
         if (newMessage.trim() !== "") {
-            setMessages([...messages, newMessage]);
+            setMessages(messages => [...messages, newMessage]);
         }
     };
 
