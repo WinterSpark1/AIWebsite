@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./Chatbot.css";
+import { generateReply } from "../AI/AI.jsx";
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
-
     const addMessage = (newMessage) => {
         if (newMessage.trim() !== "") {
             setMessages([...messages, newMessage]);
@@ -37,6 +37,12 @@ const UserInput = ({ addMessage }) => {
     const handleSubmit = () => {
         addMessage(input);
         setInput(""); // Clear input field after submission
+
+        generateReply({ input_message: input })
+            .then(response => {
+                addMessage(response.message.content);
+        })
+            .catch(error => console.error("Error generating reply:", error));
     };
 
     return (
