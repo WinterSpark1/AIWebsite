@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/winterspark1/winterspark1.github.io/AIWebsite",
+  "homepage": "https://github.com/WinterSpark1/AIWebsite/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
