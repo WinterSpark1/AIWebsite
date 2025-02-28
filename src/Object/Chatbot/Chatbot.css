@@ -1,0 +1,77 @@
+:root {
+    --primaryColor: #ED1215;
+    --secondaryColor: #12EDEA;
+}
+
+.Chatbot {
+    background: #030000;
+    width: 90%; height: 80%;
+    margin: auto;
+}
+
+.Chatbot .chatBody {
+    width: 100%; height: 92%;
+    background-color: #1f2024;
+
+}
+.Chatbot .chatBody .titleBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #a4a8ab;
+
+}
+.Chatbot .chatBody .responseBox {
+    display: flex;
+    flex-direction: column;
+    width: 90%; height: 96%;
+    overflow: auto;
+    background-color: #343c3b;
+    margin: auto;
+    color: white;
+}
+.Chatbot .chatBody .responseBox p {
+    margin-left: 15px; margin-right: 15px;
+}
+.Chatbot .chatBody .responseBox .Message {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    background-color: rgba(99, 99, 99, 0.29);
+    margin-bottom: 10px;
+}
+
+.Chatbot .chatBody .responseBox .Message.user {
+}
+
+/* AI message styles */
+.Chatbot .chatBody .responseBox .Message.ai p{
+    margin-left: auto;
+    max-width: 90%;
+}
+
+.Chatbot .userInput {
+    width: 100%; height: 8%;
+    background: #afad32;
+    display: flex;
+    flex-direction: row;
+}
+.Chatbot .userInput input {
+    width: 80%;
+    outline: none;
+    text-align: center;
+    border: none;
+}
+.Chatbot .userInput .submitButton {
+    width: 20%; height: 100%;
+    margin: auto;
+    background: var(--secondaryColor);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
