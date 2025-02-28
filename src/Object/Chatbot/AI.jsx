@@ -28,5 +28,3 @@ export const generateReply = async ({ input_message }) => {
 
     return response;
 };
-
-export default { generateReply }

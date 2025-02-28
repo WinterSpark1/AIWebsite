@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Chatbot.css";
-import { generateReply } from "../AI/AI.jsx";
+import { generateReply } from "./AI.jsx";
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
