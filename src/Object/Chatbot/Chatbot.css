@@ -26,7 +26,8 @@
 .Chatbot .chatBody .responseBox {
     display: flex;
     flex-direction: column;
-    width: 90%; height: 100%;
+    width: 90%; height: 96%;
+    overflow: auto;
     background-color: #343c3b;
     margin: auto;
     color: white;
@@ -39,9 +40,18 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: max-content;
     background-color: rgba(99, 99, 99, 0.29);
     margin-bottom: 10px;
+}
+
+.Chatbot .chatBody .responseBox .Message.user {
+}
+
+/* AI message styles */
+.Chatbot .chatBody .responseBox .Message.ai p{
+    margin-left: auto;
+    max-width: 90%;
 }
 
 .Chatbot .userInput {

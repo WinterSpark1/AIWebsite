@@ -4,9 +4,10 @@ import { generateReply } from "../AI/AI.jsx";
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
-    const addMessage = (newMessage) => {
+
+    const addMessage = (newMessage, sender) => {
         if (newMessage.trim() !== "") {
-            setMessages(messages => [...messages, newMessage]);
+            setMessages(messages => [...messages, { text: newMessage, sender }]);
         }
     };
 
@@ -17,7 +18,6 @@ const Chatbot = () => {
         </div>
     );
 };
-
 
 const ChatBody = ({ messages }) => {
     return (
@@ -36,13 +36,13 @@ const UserInput = ({ addMessage }) => {
     const [input, setInput] = useState("");
 
     const handleSubmit = () => {
-        addMessage(input);
+        addMessage(input, "user");
         setInput(""); // Clear input field after submission
 
         generateReply({ input_message: input })
             .then(response => {
-                addMessage(response);
-        })
+                addMessage(response, "ai");
+            })
             .catch(error => console.error("Error generating reply:", error));
     };
 
@@ -63,8 +63,8 @@ const UserInput = ({ addMessage }) => {
 
 const Message = ({ message }) => {
     return (
-        <div className="Message">
-            <p>{message}</p>
+        <div className={`Message ${message.sender}`}>
+            <p>{message.text}</p>
         </div>
     );
 };
