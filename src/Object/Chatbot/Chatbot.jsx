@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Chatbot.css";
 import { generateReply } from "./AI.jsx";
 import AiSettings from "./AiSettings.jsx";
