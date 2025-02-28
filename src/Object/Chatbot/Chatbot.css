@@ -18,6 +18,15 @@
     background: #4c4d50;
     height: 100%; width: 100%;
 }
+.Chatbot .AiSettings .inputContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #26272b;
+    width: 325px; height: 150px;
+    box-shadow: #2c2f32 0 0 10px 4px;
+}
 .Chatbot .AiSettings .ipSubmitButton {
     display: flex;
     flex-direction: column;

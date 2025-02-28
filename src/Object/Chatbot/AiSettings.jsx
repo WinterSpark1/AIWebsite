@@ -4,8 +4,10 @@ const AiSettings = () => {
     return (
         <div className="AiSettings">
 
-            <input placeholder="Server IP"></input>
-            <div className="ipSubmitButton"><img src={tickimg} alt=""/></div>
+            <div className="inputContainer">
+                <input placeholder="Server IP"></input>
+                <div className="ipSubmitButton"><img src={tickimg} alt=""/></div>
+            </div>
         </div>
     )
 }
